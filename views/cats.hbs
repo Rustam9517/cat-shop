@@ -1,0 +1,33 @@
+<h1>Список питомцев</h1>
+{{#if cats.length}}
+    <div class="row">
+        {{#each cats}}
+            <div class="col s3 m4">
+                <div class="card large ">
+                    <div class="card-image">
+                        <img src="{{image}}" alt="{{breed}}">
+                        <span class="card-title white-text" id="breed_text">
+                            {{breed}}
+                            <span class="price white-text">{{price}}</span>
+                        </span>
+
+                    </div>
+                    <div class="card-content">
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="/cats/{{_id}}/info">Подробнее</a>
+                        <a href="/cats/{{_id}}/edit?allow=true">Редактировать</a>
+                        <form action="/cart/add" method="POST">
+                            <input type="hidden" name="id" value="{{_id}}">
+                            <button type="submit" class="btn btn-primary">Купить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+{{else}}
+    <p>Их пока нет</p>
+{{/if}}

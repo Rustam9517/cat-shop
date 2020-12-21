@@ -1,0 +1,24 @@
+.nav-wrapper{
+    padding: 0 2rem;
+}
+#description{
+    height: 6rem;
+}
+#breed_text{
+    font-size: 25px;
+    font-weight: 500;
+}
+.card-action{
+    display: flex;
+    justify-content: space-between;
+}
+.card-title{
+    display: flex;
+    flex-direction: column;
+}
+.card-image span{
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+.total-price{
+    font-size: 30px;
+}

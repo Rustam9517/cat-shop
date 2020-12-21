@@ -1,0 +1,46 @@
+<h1 class="center-align">Изменить Данные о питомце</h1>
+<div class="row">
+    <form class="col s12" action="/cats/edit" method="POST">
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+                <input id="breed" name="breed" type="text" class="validate" value="{{cat.breed}}">
+                <label for="breed">Порода</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+                <input id="weight" name="weight" type="number" class="validate" value="{{cat.weight}}">
+                <label for="weight">Вес</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+                <input id="age" name="age" type="number" class="validate" value="{{cat.age}}">
+                <label for="age">Возраст</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+                <input id="price"  name="price" type="number" class="validate" value="{{cat.price}}">
+                <label for="price">Цена</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6 offset-s3">
+                <input id="image" name="image" type="text" class="validate" value="{{cat.image}}">
+                <label for="image">Фотография</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field s3 offset-s3">
+                <textarea id="description" name = "description" class="materialize-textarea">{{cat.description}}</textarea>
+                <label for="description">Описание Породы</label>
+            </div>
+        </div>
+
+        <div class="row center-align">
+            <input type="hidden" name="id" value="{{cat._id}}">
+            <button class="btn-large btn-primary">Изменить</button>
+        </div>
+    </form>
+</div>
